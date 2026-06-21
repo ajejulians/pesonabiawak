@@ -1,13 +1,17 @@
 export function ShopeeIcon({ className }: { className?: string }) {
   return (
     <svg
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      className={className}
       xmlns="http://www.w3.org/2000/svg"
+      viewBox="-5 -5 50 55"
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
     >
-      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v2h-2V7zm0 4h2v6h-2v-6z" />
-      <path d="M7.5 14.5c0-1.5 1-2.5 2.5-2.5h4c1.5 0 2.5 1 2.5 2.5 0 1.2-.8 2.2-2 2.4l-.5.1v1h-1.5v-1l-.5-.1c-.3 0-.5-.2-.5-.5v-1.4h-2.5v1.4c0 .3-.2.5-.5.5l-.5.1v1H9v-1l-.5-.1c-1.2-.2-2-1.2-2-2.4z" />
+      <path d="M33.055 43.5h-18.11a4 4 0 0 1-3.973-3.537l-2.588-22.19h31.232l-2.588 22.19a4 4 0 0 1-3.973 3.537" />
+      <path d="M13.352 17.773V15.16a10.66 10.66 0 0 1 21.32 0v2.613" />
+      <path d="M19.529 36.983c1.154.865 2.308 1.153 4.615 1.153h1.154a3.75 3.75 0 0 0 0-7.5h-2.596a3.75 3.75 0 0 1 0-7.5h1.154c2.596 0 3.75.289 4.615 1.154" />
     </svg>
   );
 }

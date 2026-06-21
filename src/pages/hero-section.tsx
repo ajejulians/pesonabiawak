@@ -157,7 +157,7 @@ export default function Landing() {
                     onClick={() => window.open("https://id.shp.ee/wtChweVy")}
                     className="inline-flex items-center justify-center gap-2 px-10 py-4 rounded-xl text-lg font-semibold bg-[#EE4D2D] hover:bg-[#d4411e] text-white shadow-xs transition-all duration-300 hover:scale-105 hover:shadow-xl"
                   >
-                    <ShopeeIcon className="w-5 h-5" />
+                    <ShopeeIcon className="w-8 h-8" />
                     Beli di Shopee
                   </Button>
                   <Button
