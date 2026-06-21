@@ -1,5 +1,5 @@
 import { Logo } from "@/assets/icons";
-import { Facebook, Instagram, Mail, MapPin, Phone, Twitter } from "lucide-react";
+import { Facebook, Instagram,  MapPin, Twitter } from "lucide-react";
 
 export default function Footer () {
 
@@ -57,25 +57,13 @@ export default function Footer () {
 
             {/* Contact Column */}
             <div className="space-y-6">
-              <h4 className="font-bold text-lg">Hubungi Kami</h4>
+              <h4 className="font-bold text-lg"></h4>
               <ul className="space-y-4 text-gray-400">
-                <li className="flex items-center gap-3">
-                  <div className="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-4 h-4 text-green-500" />
-                  </div>
-                  <span>0812-3456-7890</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <div className="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-4 h-4 text-green-500" />
-                  </div>
-                  <span>info@pesonabiawak.id</span>
-                </li>
                 <li className="flex items-start gap-3">
                   <div className="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-4 h-4 text-green-500" />
                   </div>
-                  <span>Gn.Sindur, Kab. Bogor, Jawa Barat</span>
+                  <span>Kabupaten Bogor, Jawa Barat</span>
                 </li>
               </ul>
             </div>

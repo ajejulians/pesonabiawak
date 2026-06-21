@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
   Package, Shield, Truck, BadgeCheck, ArrowRight, Star,
@@ -31,12 +32,8 @@ type Product = {
   name: string;
   volume: string;
   description: string;
-  price: number;
-  originalPrice?: number;
   badge?: string;
   badgeVariant: "bestSeller" | "premium" | "popular" | "bestValue";
-  isPackage: boolean;
-  savings?: number;
   image: string;
 };
 
@@ -52,10 +49,8 @@ const products: Product[] = [
     volume: "10ml, 20ml, 30ml",
     description:
       "Minyak biawak asli 100% murni, diekstrak dengan metode tradisional. Cocok untuk perawatan kulit dan kesehatan sehari-hari.",
-    price: 75000,
     badge: "Best Seller",
     badgeVariant: "bestSeller",
-    isPackage: false,
     image: Original,
   },
   {
@@ -64,10 +59,8 @@ const products: Product[] = [
     volume: "30ml",
     description:
       "Formula enhanced dengan campuran herbal pilihan untuk hasil yang lebih optimal. Diperkaya ekstrak alami Indonesia.",
-    price: 95000,
     badge: "Premium",
     badgeVariant: "premium",
-    isPackage: false,
     image: Unggulan,
   },
   {
@@ -76,12 +69,8 @@ const products: Product[] = [
     volume: "2 Botol",
     description:
       "Paket ekonomis berisi 2 botol Minyak Biawak Original. Hemat lebih banyak untuk pemakaian rutin keluarga.",
-    price: 140000,
-    originalPrice: 150000,
     badge: "Popular",
     badgeVariant: "popular",
-    isPackage: true,
-    savings: 10000,
     image: Essen,
   },
   {
@@ -90,12 +79,8 @@ const products: Product[] = [
     volume: "4 Botol",
     description:
       "Paket lengkap untuk keluarga berisi 4 botol Minyak Biawak Original. Pilihan terbaik dengan penghematan maksimal.",
-    price: 260000,
-    originalPrice: 300000,
     badge: "Best Value",
     badgeVariant: "bestValue",
-    isPackage: true,
-    savings: 40000,
     image: Obat,
   },
 ];
@@ -106,10 +91,6 @@ const features: Feature[] = [
   { icon: <BadgeCheck className="w-5 h-5" />, label: "100% Original" },
   { icon: <RefreshCcw className="w-5 h-5" />, label: "Garansi Uang Kembali" },
 ];
-
-function formatCurrency(amount: number): string {
-  return `IDR ${amount.toLocaleString("id-ID")}`;
-}
 
 function getBadgeStyle(variant: Product["badgeVariant"]): string {
   const styles: Record<Product["badgeVariant"], string> = {
@@ -155,27 +136,12 @@ function ProductCard({ product }: { product: Product }) {
             {product.description}
           </p>
 
-          <div className="mb-4">
-            {product.isPackage && product.originalPrice ? (
-              <div className="flex items-center gap-3">
-                <span className="text-2xl font-extrabold text-[#80CC28]">
-                  {formatCurrency(product.price)}
-                </span>
-                <span className="text-sm text-gray-400 line-through">
-                  {formatCurrency(product.originalPrice)}
-                </span>
-              </div>
-            ) : (
-              <span className="text-2xl font-extrabold text-[#80CC28]">
-                {formatCurrency(product.price)}
-              </span>
-            )}
-          </div>
-
-          <Button className="w-full rounded-xl bg-[#80CC28] hover:bg-green-600 text-white font-semibold py-5 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/30 hover:scale-[1.02] flex items-center justify-center gap-2">
-            <ShoppingCart className="w-5 h-5" />
-            Beli Sekarang
-          </Button>
+          <Link to="/" className="mt-auto">
+            <Button className="w-full rounded-xl bg-[#80CC28] hover:bg-green-600 text-white font-semibold py-5 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/30 hover:scale-[1.02] flex items-center justify-center gap-2 cursor-pointer">
+              <ShoppingCart className="w-5 h-5" />
+              Beli Sekarang
+            </Button>
+          </Link>
         </CardContent>
       </Card>
     </motion.div>
