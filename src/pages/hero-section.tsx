@@ -7,6 +7,7 @@ import {
 import { Eksim, Gatal, Koreng, Photo1, Photo7 } from "../assets/photos";
 import { Button } from "../components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { ShopeeIcon, TiktokIcon } from "../components/ui/social-icons";
 import AppLayout from "../layouts/app-layout";
 import { Link } from "react-router-dom";
 
@@ -154,19 +155,19 @@ export default function Landing() {
                 >
                   <Button
                     onClick={() => window.open("https://id.shp.ee/wtChweVy")}
-                    className="inline-flex items-center justify-center gap-2 px-10 py-4 rounded-xl text-lg font-semibold bg-[#EE4D2D] hover:bg-[#EE4D2D] text-white shadow-xs transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                    className="inline-flex items-center justify-center gap-2 px-10 py-4 rounded-xl text-lg font-semibold bg-[#EE4D2D] hover:bg-[#d4411e] text-white shadow-xs transition-all duration-300 hover:scale-105 hover:shadow-xl"
                   >
+                    <ShopeeIcon className="w-5 h-5" />
                     Beli di Shopee
-                    <ArrowRight className="w-5 h-5" />
                   </Button>
                   <Button
                     onClick={() =>
                       window.open("https://vt.tokopedia.com/t/ZS9jwvRy28WeN-BWuyn/")
                     }
-                    className="inline-flex items-center justify-center gap-2 px-10 py-4 rounded-xl text-lg font-semibold bg-[#000] text-white shadow-xs transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                    className="inline-flex items-center justify-center gap-2 px-10 py-4 rounded-xl text-lg font-semibold bg-[#000] hover:bg-[#1a1a1a] text-white shadow-xs transition-all duration-300 hover:scale-105 hover:shadow-xl"
                   >
+                    <TiktokIcon className="w-5 h-5" />
                     Beli di TikTok
-                    <ArrowRight className="w-5 h-5" />
                   </Button>
                 </motion.div>
 

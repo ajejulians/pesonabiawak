@@ -1,5 +1,5 @@
 import { Logo } from "@/assets/icons";
-import { Facebook, Instagram,  MapPin, Twitter } from "lucide-react";
+import { MapPin } from "lucide-react";
 
 export default function Footer () {
 
@@ -22,17 +22,6 @@ export default function Footer () {
                 Produk minyak biawak asli berkualitas premium untuk kesehatan dan vitalitas Anda. 
                 Dipercaya sejak generasi terdahulu.
               </p>
-              <div className="flex items-center gap-3 pt-2">
-                <a href="#" className="w-10 h-10 bg-gray-800 hover:bg-green-500 rounded-full flex items-center justify-center transition-all duration-300">
-                  <Instagram className="w-5 h-5" />
-                </a>
-                <a href="#" className="w-10 h-10 bg-gray-800 hover:bg-green-500 rounded-full flex items-center justify-center transition-all duration-300">
-                  <Facebook className="w-5 h-5" />
-                </a>
-                <a href="#" className="w-10 h-10 bg-gray-800 hover:bg-green-500 rounded-full flex items-center justify-center transition-all duration-300">
-                  <Twitter className="w-5 h-5" />
-                </a>
-              </div>
             </div>
 
             {/* Products Column */}
